@@ -33,12 +33,25 @@ Everything lives in `shooter.html` — inline `<style>`, a `<canvas>` element, a
 
 ## Git Workflow
 
-Commit and push after every meaningful change:
+**After every change, commit and push to GitHub.** This is mandatory — never leave work uncommitted. Each saved state on GitHub lets us revert cleanly if something breaks.
+
+1. Stage changed files by name (never `git add .`)
+2. Write a clear, specific commit message describing *what changed and why*
+3. Push immediately
 
 ```
 git add shooter.html
-git commit -m "short description"
+git commit -m "feat: add shield power-up that absorbs one hit"
 git push
 ```
 
 Remote: `https://github.com/abhayemadhok/ball-shooter`
+
+### Commit message conventions
+- `feat:` — new feature or gameplay addition
+- `fix:` — bug fix
+- `tweak:` — tuning constants (speeds, intervals, scoring)
+- `refactor:` — code restructure with no behaviour change
+- `style:` — visual/colour changes only
+
+Keep the subject line under 72 characters. If more context is needed, add a blank line followed by a short body.
